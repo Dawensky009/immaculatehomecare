@@ -1,72 +1,83 @@
 
 
-# Website Enhancement Plan
+# "Join Our Team" - Careers Page and Home Section
 
-## Issues to Fix
+## What We're Building
 
-### 1. Navbar Text Invisible Over Hero
-The navigation links currently use dark text colors (`text-muted-foreground`, `text-navy`) which disappear against the dark hero background. The fix is to make the navbar text white when the page hasn't been scrolled (i.e., when the hero is behind it), and switch to dark text once the user scrolls down and the white background kicks in.
+1. **A new "Join Our Team" section on the home page** -- an eye-catching banner placed between the Testimonials and Our Services sections that invites CNAs, HHAs, LPNs, and RNs to apply. It will have a button that takes visitors to a dedicated careers page.
 
-### 2. "Request Care" Button Text Invisible
-The "Request Care" button in the hero uses the `outline` variant which applies a white background (`bg-background`), making the white text invisible. The fix is to override the button styling to be transparent with a visible white border and white text.
+2. **A separate Careers / Apply page** (`/careers`) with:
+   - A hero section with a compelling headline about joining the team
+   - Benefits of working at Immaculate Home Care (competitive pay, flexible schedules, supportive team, etc.)
+   - Open positions listed (CNA, HHA, LPN, RN)
+   - A full application form
 
-### 3. Make the Site More Dynamic and Professional
-
-#### A. Sliding Certification Banner (Marquee)
-A continuously scrolling horizontal ticker/marquee strip that highlights certifications and credentials. It will display items like:
-- "CNA Certified"
-- "AHCA Licensed"
-- "LPN & RN Staffed"
-- "Background Checked"
-- "Serving All of Florida"
-
-This will appear as a standalone banner AND be embedded inside the bento grid.
-
-#### B. Bento Grid Section (Inspired by the Reference Image)
-A visually rich, multi-cell grid layout placed after the "Who We Serve" section. The grid will have a dark navy/charcoal background with cards of varying sizes, similar to the uploaded reference image. It will contain:
-
-- **Cell 1 (Large, top-left)**: Key stats with partner/certification logos - "500+ Families Served", "AHCA Licensed Provider"
-- **Cell 2 (Large, top-right)**: Trusted by leading healthcare networks and insurers (with placeholder brand names)
-- **Cell 3 (Bottom-left)**: An animated counter/stat card - "24/7 Care Available", "15+ Years Combined Experience"
-- **Cell 4 (Bottom-center)**: A stylized Florida map with location markers showing service areas, using SVG
-- **Cell 5 (Bottom-right)**: The sliding certification banner (marquee) embedded inside a grid cell
-
-#### C. Sliding Testimonials/Comments
-A horizontally auto-scrolling testimonial section with cards showing client reviews. Each card will include a quote, client name (anonymized), and star rating. This adds social proof and visual movement.
-
-#### D. Scroll Animations
-Sections will fade in as they enter the viewport using `framer-motion` (already installed). This adds life to the page as users scroll.
+3. **Application form fields:**
+   - Full Name
+   - Phone Number
+   - Email Address
+   - Position applying for (CNA / HHA / LPN / RN -- select one)
+   - Years of experience (dropdown or number input)
+   - Certifications/Licenses held (checkboxes)
+   - Are you authorized to work in the US? (Yes/No)
+   - Briefly describe your caregiving experience (text area)
+   - Preferred work schedule (Full-time / Part-time / Per Diem)
+   - Preferred contact method (Phone / Email)
+   - Submit button
+   - Full client-side validation on required fields
 
 ---
 
 ## Technical Details
 
-### Files to Modify
-- **`src/components/Navbar.tsx`** -- Add `isScrolled` conditional classes: white text when transparent, dark text when scrolled
-- **`src/components/HeroSlider.tsx`** -- Fix the "Request Care" button by removing the outline variant's background override
+### Setting Up Routing
 
-### Files to Create
-- **`src/components/SlidingBanner.tsx`** -- Infinite-scroll marquee component with certification badges
-- **`src/components/BentoGrid.tsx`** -- Dark-themed bento grid with stats, Florida map SVG, and embedded marquee
-- **`src/components/FloridaMap.tsx`** -- SVG map of Florida with animated location pins
-- **`src/components/Testimonials.tsx`** -- Auto-scrolling testimonial cards with ratings
-- **`src/components/ScrollReveal.tsx`** -- Wrapper component using framer-motion for fade-in-on-scroll animation
+The app currently renders everything directly in `App.tsx` with no router. We need to add `react-router-dom` (already installed) to support two pages:
 
-### Files to Update
-- **`src/App.tsx`** -- Add the new sections (SlidingBanner, BentoGrid, Testimonials) and wrap existing sections in ScrollReveal
-- **`src/index.css`** -- Add marquee animation keyframes and bento grid utility styles
+- **`/`** -- The existing home page (all current sections)
+- **`/careers`** -- The new careers/application page
 
-### Section Order (Updated)
+**Files to modify:**
+
+- **`src/App.tsx`** -- Wrap content in `BrowserRouter` with `Routes` and `Route`. Move the current home page content into a new `HomePage` component, add a route for `/careers`.
+
+- **`src/components/Navbar.tsx`** -- Add a "Join Our Team" link that navigates to `/careers` using React Router's `Link` or `useNavigate`. Update the scroll logic so that if a user is on the careers page and clicks a home-section link (like "Services"), it navigates back to `/` first.
+
+- **`src/components/SiteFooter.tsx`** -- Add a "Careers" link in the footer quick links.
+
+### New Files to Create
+
+- **`src/pages/HomePage.tsx`** -- Extracts the current home page layout (all existing sections) into its own page component.
+
+- **`src/components/JoinOurTeam.tsx`** -- The new home page section (banner/CTA). Features:
+  - Dark navy or gradient background to stand out
+  - Headline: "Join Our Team of Compassionate Caregivers"
+  - Short description about career opportunities
+  - Role badges showing CNA, HHA, LPN, RN
+  - A prominent "Apply Now" button linking to `/careers`
+
+- **`src/pages/CareersPage.tsx`** -- The full careers page with:
+  - Navbar at the top (reused)
+  - Hero banner with headline and background styling
+  - "Why Work With Us" benefits grid (4-6 benefit cards)
+  - Open positions section listing roles
+  - The application form
+  - Footer at the bottom (reused)
+
+- **`src/components/ApplicationForm.tsx`** -- The job application form component with all fields listed above, client-side validation, and a success toast on submission.
+
+### Section Order on Home Page (Updated)
 1. Navbar
 2. Hero Slider
-3. Sliding Certification Banner (marquee strip)
+3. Sliding Banner
 4. Who We Serve
-5. Bento Grid (stats, Florida map, embedded marquee)
+5. Bento Grid
 6. Care Team
-7. Testimonials (sliding comments)
-8. Our Services
-9. Why Choose Us
-10. Our Commitment
-11. Contact Form
-12. Footer
+7. Testimonials
+8. **Join Our Team (NEW)**
+9. Our Services
+10. Why Choose Us
+11. Our Commitment
+12. Contact Form
+13. Footer
 
