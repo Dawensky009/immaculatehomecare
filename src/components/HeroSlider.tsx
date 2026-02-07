@@ -88,8 +88,7 @@ export function HeroSlider() {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 hover:text-white text-base px-6"
+              className="bg-transparent border-2 border-white/50 text-white hover:bg-white/10 hover:border-white hover:text-white text-base px-6"
               onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
             >
               Request Care

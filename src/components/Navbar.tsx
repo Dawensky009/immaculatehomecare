@@ -40,7 +40,9 @@ export function Navbar() {
           {/* Logo */}
           <button
             onClick={() => scrollTo("#home")}
-            className="text-lg md:text-xl font-bold text-navy flex-shrink-0"
+            className={`text-lg md:text-xl font-bold flex-shrink-0 transition-colors duration-300 ${
+              isScrolled ? "text-navy" : "text-white"
+            }`}
           >
             Immaculate Home Care
           </button>
@@ -51,7 +53,11 @@ export function Navbar() {
               <button
                 key={link.href}
                 onClick={() => scrollTo(link.href)}
-                className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary gentle-animation rounded-md hover:bg-secondary"
+                className={`px-3 py-2 text-sm font-medium gentle-animation rounded-md transition-colors duration-300 ${
+                  isScrolled
+                    ? "text-muted-foreground hover:text-primary hover:bg-secondary"
+                    : "text-white/80 hover:text-white hover:bg-white/10"
+                }`}
               >
                 {link.label}
               </button>
@@ -71,7 +77,9 @@ export function Navbar() {
 
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className="lg:hidden p-2 text-foreground"
+              className={`lg:hidden p-2 transition-colors duration-300 ${
+                isScrolled ? "text-foreground" : "text-white"
+              }`}
               aria-label="Toggle menu"
             >
               {isMobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
