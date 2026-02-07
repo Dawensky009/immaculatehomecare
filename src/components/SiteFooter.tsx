@@ -1,4 +1,5 @@
 import { Phone, Mail, ShieldCheck } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const quickLinks = [
   { label: "Home", href: "#home" },
@@ -47,6 +48,14 @@ export function SiteFooter() {
                   </button>
                 </li>
               ))}
+              <li>
+                <Link
+                  to="/careers"
+                  className="text-sm text-white/70 hover:text-white gentle-animation"
+                >
+                  Careers
+                </Link>
+              </li>
             </ul>
           </div>
 
