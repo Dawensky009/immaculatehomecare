@@ -1,96 +1,72 @@
 
 
-# Immaculate Home Care Services — Website Plan
+# Website Enhancement Plan
 
-## Overview
-A professional, single-page scrolling website for a licensed Florida home health care provider. The design follows a **clean & medical** aesthetic — whites, soft blues, and teals — conveying trust, professionalism, and compassion.
+## Issues to Fix
+
+### 1. Navbar Text Invisible Over Hero
+The navigation links currently use dark text colors (`text-muted-foreground`, `text-navy`) which disappear against the dark hero background. The fix is to make the navbar text white when the page hasn't been scrolled (i.e., when the hero is behind it), and switch to dark text once the user scrolls down and the white background kicks in.
+
+### 2. "Request Care" Button Text Invisible
+The "Request Care" button in the hero uses the `outline` variant which applies a white background (`bg-background`), making the white text invisible. The fix is to override the button styling to be transparent with a visible white border and white text.
+
+### 3. Make the Site More Dynamic and Professional
+
+#### A. Sliding Certification Banner (Marquee)
+A continuously scrolling horizontal ticker/marquee strip that highlights certifications and credentials. It will display items like:
+- "CNA Certified"
+- "AHCA Licensed"
+- "LPN & RN Staffed"
+- "Background Checked"
+- "Serving All of Florida"
+
+This will appear as a standalone banner AND be embedded inside the bento grid.
+
+#### B. Bento Grid Section (Inspired by the Reference Image)
+A visually rich, multi-cell grid layout placed after the "Who We Serve" section. The grid will have a dark navy/charcoal background with cards of varying sizes, similar to the uploaded reference image. It will contain:
+
+- **Cell 1 (Large, top-left)**: Key stats with partner/certification logos - "500+ Families Served", "AHCA Licensed Provider"
+- **Cell 2 (Large, top-right)**: Trusted by leading healthcare networks and insurers (with placeholder brand names)
+- **Cell 3 (Bottom-left)**: An animated counter/stat card - "24/7 Care Available", "15+ Years Combined Experience"
+- **Cell 4 (Bottom-center)**: A stylized Florida map with location markers showing service areas, using SVG
+- **Cell 5 (Bottom-right)**: The sliding certification banner (marquee) embedded inside a grid cell
+
+#### C. Sliding Testimonials/Comments
+A horizontally auto-scrolling testimonial section with cards showing client reviews. Each card will include a quote, client name (anonymized), and star rating. This adds social proof and visual movement.
+
+#### D. Scroll Animations
+Sections will fade in as they enter the viewport using `framer-motion` (already installed). This adds life to the page as users scroll.
 
 ---
 
-## 1. Sticky Navigation Bar
-- Company name "Immaculate Home Care Services" on the left
-- Smooth-scroll links: Home, Who We Serve, Care Team, Services, Why Choose Us, Contact
-- Highlighted **"Call Today"** button with phone icon
-- Mobile hamburger menu with slide-out panel
+## Technical Details
 
-## 2. Hero Section — Image Slider with Fade Transitions
-- **Full-width hero** with 3–4 rotating background images (cross-fade effect)
-  - Stock photos of compassionate caregivers, seniors, children, families in home settings
-  - Easy to replace with your own photos later
-- **Text overlay** stays consistent across all slides:
-  - Headline: *"Compassionate, Licensed Home Health Care—Right Where It Matters Most"*
-  - Subtext about children, adults, and seniors
-- **Trust badges**: ✔ AHCA Licensed • ✔ Professional • ✔ Patient-Centered Care
-- **"Proudly Serving Florida"** location badge
-- Two CTAs: **"Call Today"** (phone placeholder) and **"Request Care"** (scrolls to intake form)
-- Subtle dot indicators showing the current slide
+### Files to Modify
+- **`src/components/Navbar.tsx`** -- Add `isScrolled` conditional classes: white text when transparent, dark text when scrolled
+- **`src/components/HeroSlider.tsx`** -- Fix the "Request Care" button by removing the outline variant's background override
 
-## 3. Who We Serve Section
-- Three clean cards side by side (stacking on mobile):
-  - **Children With Special Needs** — ADHD, developmental delays, behavioral challenges
-  - **Adults Requiring Medical Care** — illness recovery, chronic conditions, skilled nursing
-  - **Elderly & Senior Care** — independence, safety, comfort, dignity
-- Each card with a relevant icon and the detailed descriptions you provided
-- Soft blue/teal accent colors to differentiate each group
+### Files to Create
+- **`src/components/SlidingBanner.tsx`** -- Infinite-scroll marquee component with certification badges
+- **`src/components/BentoGrid.tsx`** -- Dark-themed bento grid with stats, Florida map SVG, and embedded marquee
+- **`src/components/FloridaMap.tsx`** -- SVG map of Florida with animated location pins
+- **`src/components/Testimonials.tsx`** -- Auto-scrolling testimonial cards with ratings
+- **`src/components/ScrollReveal.tsx`** -- Wrapper component using framer-motion for fade-in-on-scroll animation
 
-## 4. Our Care Team Section
-- Four professional role cards in a grid:
-  - **CNA** – Certified Nursing Assistants
-  - **HHA** – Home Health Aides
-  - **LPN** – Licensed Practical Nurses
-  - **RN** – Registered Nurses
-- Each with an icon, title, and brief role description
-- A trust statement about vetting and qualifications below the grid
+### Files to Update
+- **`src/App.tsx`** -- Add the new sections (SlidingBanner, BentoGrid, Testimonials) and wrap existing sections in ScrollReveal
+- **`src/index.css`** -- Add marquee animation keyframes and bento grid utility styles
 
-## 5. Our Services Section
-- Four service categories in clean, expandable cards:
-  - 🩺 **Skilled Nursing Care** (LPN & RN) — medication management, post-hospital care, etc.
-  - 🧹 **Personal Care & Daily Living** (CNA & HHA) — bathing, grooming, meals, etc.
-  - 👶 **Pediatric & Special Needs Support** — supervision, routine support, emotional care
-  - 👵 **Senior Companion & Support Care** — daily living, medication reminders, companionship
-- Each card with bullet points of included services
-
-## 6. Why Choose Us Section
-- Five differentiators displayed as an icon checklist:
-  - ✔ AHCA Licensed in Florida
-  - ✔ Qualified, Compassionate Professionals
-  - ✔ Personalized Care Plans
-  - ✔ Care in the Comfort of Home
-  - ✔ Families-First Approach
-- Short description under each with clean checkmark icons
-
-## 7. Our Commitment Section
-- Visually distinct banner highlighting the four core values:
-  - Respectful • Professional • Reliable • Compassionate
-- Mission statement in a clean, centered layout
-
-## 8. Contact & Care Request Section
-- **Phone number** displayed prominently (placeholder for now)
-- **Detailed Intake/Request Form** with:
-  - Full name
-  - Phone number
-  - Email address
-  - Who needs care? (Child / Adult / Senior — radio buttons)
-  - Type of care needed (checkboxes: Skilled Nursing, Personal Care, Pediatric, Senior Care)
-  - Brief description of needs (text area)
-  - Preferred contact method (Phone / Email)
-  - Submit button
-- Client-side validation on all fields
-- "Serving Communities Across Florida" and "AHCA Licensed" badges
-
-## 9. Footer
-- Company name and tagline
-- Quick-scroll links to all sections
-- Contact info placeholders (phone, email)
-- AHCA Licensed badge
-- Copyright notice
-
-## Design Details
-- **Color palette**: White backgrounds, soft blue (#0EA5E9) and teal (#0D9488) accents, navy (#1E3A5F) headings
-- **Typography**: Clean sans-serif (Inter or system fonts), strong hierarchy
-- **Icons**: Medical and care-themed Lucide icons throughout
-- **Hero slider**: Smooth fade transitions every 5–6 seconds, dot indicators
-- **Scroll animations**: Subtle fade-in as sections enter the viewport
-- **Fully responsive**: Mobile-first, all sections stack cleanly on small screens
-- **No backend needed initially**: The intake form is UI-only (can connect to Lovable Cloud later for submissions)
+### Section Order (Updated)
+1. Navbar
+2. Hero Slider
+3. Sliding Certification Banner (marquee strip)
+4. Who We Serve
+5. Bento Grid (stats, Florida map, embedded marquee)
+6. Care Team
+7. Testimonials (sliding comments)
+8. Our Services
+9. Why Choose Us
+10. Our Commitment
+11. Contact Form
+12. Footer
 
