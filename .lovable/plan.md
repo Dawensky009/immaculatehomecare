@@ -1,85 +1,83 @@
 
-# Website Template Architecture
 
-## Project Structure
+# "Join Our Team" - Careers Page and Home Section
 
-```
-src/
-├── App.tsx                          # Main routing hub (BrowserRouter, Routes)
-├── main.tsx                         # Entry point with React.StrictMode
-├── index.css                        # Global animations, typography, utilities
-├── pages/
-│   ├── HomePage.tsx                 # Landing page: Hero → Sections → Footer
-│   └── CareersPage.tsx              # Secondary page: Hero → Benefits → Form
-├── components/
-│   ├── Navbar.tsx                   # Sticky nav with scroll-aware styling
-│   ├── SiteFooter.tsx               # Footer with links & contact
-│   ├── ScrollReveal.tsx             # Wrapper: fade-in on scroll (framer-motion)
-│   ├── HeroSlider.tsx               # Full-screen hero with image carousel
-│   ├── SlidingBanner.tsx            # Marquee ticker (infinite horizontal scroll)
-│   ├── Testimonials.tsx             # Auto-scrolling cards section
-│   ├── BentoGrid.tsx                # Multi-cell grid: stats, map, embedded marquee
-│   ├── FloridaMap.tsx               # SVG map with animated location pins
-│   ├── [SectionName].tsx            # Content sections (WhoWeServe, CareTeam, etc.)
-│   ├── [FormName].tsx               # Forms (ContactForm, ApplicationForm)
-│   └── ui/                          # Shadcn UI components (Button, Card, Badge, etc.)
-├── assets/                          # Images, SVGs, icons
-├── hooks/                           # Custom React hooks
-└── lib/                             # Utilities (cn(), animations)
-```
+## What We're Building
 
-## Routing & Navigation
+1. **A new "Join Our Team" section on the home page** -- an eye-catching banner placed between the Testimonials and Our Services sections that invites CNAs, HHAs, LPNs, and RNs to apply. It will have a button that takes visitors to a dedicated careers page.
 
-- **React Router**: BrowserRouter wraps entire app
-- **Routes**: Define pages (`/`, `/careers`, etc.)
-- **Cross-page navigation**: Check `location.pathname` in Navbar; if not on home, navigate to `/` first, then scroll to anchor
-- **Layout**: Navbar → Page content → Footer (global, outside Routes)
+2. **A separate Careers / Apply page** (`/careers`) with:
+   - A hero section with a compelling headline about joining the team
+   - Benefits of working at Immaculate Home Care (competitive pay, flexible schedules, supportive team, etc.)
+   - Open positions listed (CNA, HHA, LPN, RN)
+   - A full application form
 
-## Animation Patterns
+3. **Application form fields:**
+   - Full Name
+   - Phone Number
+   - Email Address
+   - Position applying for (CNA / HHA / LPN / RN -- select one)
+   - Years of experience (dropdown or number input)
+   - Certifications/Licenses held (checkboxes)
+   - Are you authorized to work in the US? (Yes/No)
+   - Briefly describe your caregiving experience (text area)
+   - Preferred work schedule (Full-time / Part-time / Per Diem)
+   - Preferred contact method (Phone / Email)
+   - Submit button
+   - Full client-side validation on required fields
 
-1. **Scroll Reveal**: `<ScrollReveal>` component wraps sections. Uses framer-motion's `whileInView` + `initial/exit` states for fade-in/slide effects
-2. **Marquee/Ticker**: CSS `@keyframes marquee` with `translateX(-50%)` animation. Duplicate items to loop seamlessly
-3. **Hero Slider**: `setInterval` toggles image index; CSS `opacity` fade-in/out for cross-fade effect
-4. **Hover Effects**: `gentle-animation` class for smooth transitions; `group-hover` for interactive elements
+---
 
-## Color & Theming
+## Technical Details
 
-- **CSS Variables** in `:root` (index.css): `--navy`, `--sky-blue`, `--teal`, `--light-blue`, `--primary`, etc.
-- **Tailwind Config**: Maps variables to theme colors (extendable for dark mode)
-- **Responsive Typography**: h1–h4 scale down on mobile; utility p tag has fixed font size
+### Setting Up Routing
 
-## Component Hierarchy
+The app currently renders everything directly in `App.tsx` with no router. We need to add `react-router-dom` (already installed) to support two pages:
 
-**Page Level** (HomePage, CareersPage) → **Sections** (HeroSlider, SlidingBanner, etc.) → **UI Components** (Card, Badge, Button)
+- **`/`** -- The existing home page (all current sections)
+- **`/careers`** -- The new careers/application page
 
-- Sections are self-contained, import their own styles
-- UI components are from Shadcn UI (pre-built, styled with Tailwind)
-- Pages compose sections in logical order with ScrollReveal wrappers
+**Files to modify:**
 
-## Forms
+- **`src/App.tsx`** -- Wrap content in `BrowserRouter` with `Routes` and `Route`. Move the current home page content into a new `HomePage` component, add a route for `/careers`.
 
-- **react-hook-form**: Manages state, validation
-- **zod**: Schema validation library
-- **Toast notifications**: Success/error feedback (sonner/Toaster)
+- **`src/components/Navbar.tsx`** -- Add a "Join Our Team" link that navigates to `/careers` using React Router's `Link` or `useNavigate`. Update the scroll logic so that if a user is on the careers page and clicks a home-section link (like "Services"), it navigates back to `/` first.
 
-## Key Patterns for Reuse
+- **`src/components/SiteFooter.tsx`** -- Add a "Careers" link in the footer quick links.
 
-1. **Section template**: Create new `.tsx` file in components/, export function, wrap page usage with `<ScrollReveal>`
-2. **Form template**: Use `react-hook-form` + `zod` schema; import form fields (Input, Select, Checkbox, Textarea from ui/)
-3. **Hero template**: Gradient background + large heading + subtitle + CTA button
-4. **Grid/Card template**: Use `BentoGrid`-style layout with CSS Grid; add `hover:shadow-lg gentle-animation` for interactivity
-5. **Marquee template**: Duplicate array data, apply `animate-marquee` class, adjust animation duration in tailwind.config
+### New Files to Create
 
-## Styling Approach
+- **`src/pages/HomePage.tsx`** -- Extracts the current home page layout (all existing sections) into its own page component.
 
-- **Tailwind CSS**: Utility-first for rapid prototyping
-- **CSS custom properties**: For theme colors (easy bulk recolor)
-- **Shadcn UI**: Pre-built, accessible components (Dialog, Accordion, Dropdown, etc.)
-- **Class utilities**: `gentle-animation`, `subtle-shadow`, `elevated-shadow` (defined in index.css)
+- **`src/components/JoinOurTeam.tsx`** -- The new home page section (banner/CTA). Features:
+  - Dark navy or gradient background to stand out
+  - Headline: "Join Our Team of Compassionate Caregivers"
+  - Short description about career opportunities
+  - Role badges showing CNA, HHA, LPN, RN
+  - A prominent "Apply Now" button linking to `/careers`
 
-## Dev Environment
+- **`src/pages/CareersPage.tsx`** -- The full careers page with:
+  - Navbar at the top (reused)
+  - Hero banner with headline and background styling
+  - "Why Work With Us" benefits grid (4-6 benefit cards)
+  - Open positions section listing roles
+  - The application form
+  - Footer at the bottom (reused)
 
-- **Vite**: Fast dev server + build (alias `@` for src/)
-- **TypeScript**: Type safety across components
-- **React 18**: Latest features, hooks
-- **ESLint**: Code linting
+- **`src/components/ApplicationForm.tsx`** -- The job application form component with all fields listed above, client-side validation, and a success toast on submission.
+
+### Section Order on Home Page (Updated)
+1. Navbar
+2. Hero Slider
+3. Sliding Banner
+4. Who We Serve
+5. Bento Grid
+6. Care Team
+7. Testimonials
+8. **Join Our Team (NEW)**
+9. Our Services
+10. Why Choose Us
+11. Our Commitment
+12. Contact Form
+13. Footer
+
