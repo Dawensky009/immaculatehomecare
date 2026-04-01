@@ -1,18 +1,18 @@
 import { Award, Handshake, Clock, HeartPulse } from "lucide-react";
 
 const values = [
-  { icon: Handshake, label: "Respectful", gradient: "from-primary to-sky-blue" },
-  { icon: Award, label: "Professional", gradient: "from-accent to-teal" },
-  { icon: Clock, label: "Reliable", gradient: "from-primary to-accent" },
-  { icon: HeartPulse, label: "Compassionate", gradient: "from-highlight to-primary" },
+  { icon: Handshake, label: "Respectful", gradient: "from-gold to-primary" },
+  { icon: Award, label: "Professional", gradient: "from-primary to-teal" },
+  { icon: Clock, label: "Reliable", gradient: "from-gold-light to-gold" },
+  { icon: HeartPulse, label: "Compassionate", gradient: "from-primary to-gold-light" },
 ];
 
 export function OurCommitment() {
   return (
-    <section className="py-20 bg-gradient-to-br from-navy via-[#0c2d4a] to-accent text-white relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-[#2C3E50] via-[#1a2d3d] to-[#2d5a4e] text-white relative overflow-hidden">
       {/* Decorative blurs */}
       <div className="absolute top-10 right-10 w-72 h-72 bg-primary/15 rounded-full blur-3xl" />
-      <div className="absolute bottom-10 left-10 w-60 h-60 bg-highlight/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 left-10 w-60 h-60 bg-gold/10 rounded-full blur-3xl" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
         <span className="inline-block bg-white/10 text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase backdrop-blur-sm">

@@ -6,7 +6,7 @@ const services = [
     icon: Stethoscope,
     title: "Skilled Nursing Care",
     subtitle: "LPN & RN Services",
-    gradient: "from-primary to-sky-blue",
+    gradient: "from-primary to-teal",
     items: [
       "Medication management and administration",
       "Wound care and dressing changes",
@@ -22,7 +22,7 @@ const services = [
     icon: HandHelping,
     title: "Personal Care & Daily Living",
     subtitle: "CNA & HHA Services",
-    gradient: "from-accent to-teal",
+    gradient: "from-gold to-gold-light",
     items: [
       "Bathing, grooming, and personal hygiene",
       "Meal preparation and feeding assistance",
@@ -37,7 +37,7 @@ const services = [
     icon: Baby,
     title: "Pediatric & Special Needs Support",
     subtitle: "Children's Care",
-    gradient: "from-highlight to-primary",
+    gradient: "from-gold-light to-primary",
     items: [
       "Supervision and safety monitoring",
       "Daily routine support and structure",
@@ -69,8 +69,8 @@ export function OurServices() {
   const [expanded, setExpanded] = useState<number | null>(0);
 
   return (
-    <section id="services" className="py-20 bg-background relative overflow-hidden">
-      <div className="absolute top-20 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
+    <section id="services" className="py-20 bg-cream relative overflow-hidden">
+      <div className="absolute top-20 left-0 w-72 h-72 bg-gold/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-14">
@@ -127,7 +127,7 @@ export function OurServices() {
                         key={item}
                         className="flex items-start gap-2.5 text-sm text-muted-foreground"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 flex-shrink-0" />
                         {item}
                       </li>
                     ))}

@@ -5,24 +5,24 @@ const audiences = [
   {
     icon: Baby,
     title: "Children With Special Needs",
-    gradient: "from-primary to-sky-blue",
-    borderColor: "border-t-primary",
+    gradient: "from-gold to-primary",
+    borderColor: "border-t-gold",
     description:
       "We provide compassionate, in-home support for children with ADHD, developmental delays, behavioral challenges, and other special needs. Our trained caregivers help with daily routines, emotional support, and supervision—giving families the relief they need while keeping children safe and nurtured.",
   },
   {
     icon: UserRound,
     title: "Adults Requiring Medical Care",
-    gradient: "from-accent to-teal",
-    borderColor: "border-t-accent",
+    gradient: "from-primary to-teal",
+    borderColor: "border-t-primary",
     description:
       "Whether recovering from illness, managing chronic conditions, or needing skilled nursing support, our team delivers professional medical care in the comfort of your own home. Services include medication management, wound care, health monitoring, and assistance with daily living activities.",
   },
   {
     icon: Heart,
     title: "Elderly & Senior Care",
-    gradient: "from-primary to-accent",
-    borderColor: "border-t-highlight",
+    gradient: "from-gold-light to-gold",
+    borderColor: "border-t-gold-light",
     description:
       "Our senior care services are designed to help older adults maintain their independence, safety, and comfort at home. From companionship and mobility assistance to medication reminders and personal hygiene, we treat every client with the dignity and respect they deserve.",
   },
@@ -30,14 +30,14 @@ const audiences = [
 
 export function WhoWeServe() {
   return (
-    <section id="who-we-serve" className="py-20 bg-gradient-to-b from-background to-light-blue relative overflow-hidden">
+    <section id="who-we-serve" className="py-20 bg-gradient-to-b from-cream to-beige-light relative overflow-hidden">
       {/* Decorative blur */}
-      <div className="absolute top-20 right-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-10 left-0 w-60 h-60 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-0 w-72 h-72 bg-gold/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 left-0 w-60 h-60 bg-primary/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-14">
-          <span className="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
+          <span className="inline-block bg-gold/10 text-gold text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
             Who We Serve
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-4">

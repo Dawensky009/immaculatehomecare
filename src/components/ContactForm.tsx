@@ -68,7 +68,7 @@ export function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-background to-light-blue">
+    <section id="contact" className="py-20 bg-gradient-to-b from-cream to-beige-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left: Contact Info */}
@@ -81,7 +81,7 @@ export function ContactForm() {
             </p>
 
             <div className="space-y-5">
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-secondary border border-border">
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-beige border border-beige-dark/30">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                   <Phone className="w-6 h-6 text-primary" />
                 </div>
@@ -91,9 +91,9 @@ export function ContactForm() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-secondary border border-border">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-primary" />
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-beige border border-beige-dark/30">
+                <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-gold" />
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email Us</p>
@@ -101,7 +101,7 @@ export function ContactForm() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-secondary border border-border">
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-beige border border-beige-dark/30">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
@@ -113,7 +113,7 @@ export function ContactForm() {
             </div>
 
             <div className="mt-8 flex items-center gap-2 text-sm text-muted-foreground">
-              <ShieldCheck className="w-5 h-5 text-primary" />
+              <ShieldCheck className="w-5 h-5 text-gold" />
               AHCA Licensed Home Care Provider
             </div>
           </div>
@@ -121,7 +121,7 @@ export function ContactForm() {
           {/* Right: Intake Form */}
           <div className="bg-card rounded-2xl border border-border p-8 shadow-lg relative overflow-hidden">
             {/* Top gradient accent */}
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-accent to-highlight" />
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-gold via-primary to-gold-light" />
             <h3 className="text-xl font-semibold text-navy mb-6">
               Care Request Form
             </h3>
@@ -186,8 +186,8 @@ export function ContactForm() {
                       onClick={() => setFormData({ ...formData, whoNeedsCare: option })}
                       className={`px-4 py-2 rounded-lg text-sm font-medium border gentle-animation ${
                         formData.whoNeedsCare === option
-                          ? "bg-primary text-primary-foreground border-primary"
-                          : "bg-background border-border text-muted-foreground hover:border-primary/50"
+                          ? "bg-gold text-white border-gold"
+                          : "bg-background border-border text-muted-foreground hover:border-gold/50"
                       }`}
                     >
                       {option === "child" ? "Child" : option === "adult" ? "Adult" : "Senior"}
@@ -215,8 +215,8 @@ export function ContactForm() {
                       onClick={() => toggleCareType(option.value)}
                       className={`px-3 py-2 rounded-lg text-sm font-medium border gentle-animation ${
                         formData.careTypes.includes(option.value)
-                          ? "bg-primary text-primary-foreground border-primary"
-                          : "bg-background border-border text-muted-foreground hover:border-primary/50"
+                          ? "bg-gold text-white border-gold"
+                          : "bg-background border-border text-muted-foreground hover:border-gold/50"
                       }`}
                     >
                       {option.label}
@@ -254,8 +254,8 @@ export function ContactForm() {
                       onClick={() => setFormData({ ...formData, contactMethod: method })}
                       className={`px-4 py-2 rounded-lg text-sm font-medium border gentle-animation ${
                         formData.contactMethod === method
-                          ? "bg-primary text-primary-foreground border-primary"
-                          : "bg-background border-border text-muted-foreground hover:border-primary/50"
+                          ? "bg-gold text-white border-gold"
+                          : "bg-background border-border text-muted-foreground hover:border-gold/50"
                       }`}
                     >
                       {method === "phone" ? "Phone" : "Email"}
@@ -266,7 +266,7 @@ export function ContactForm() {
 
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white text-base py-6 shadow-lg shadow-primary/25"
+                className="w-full bg-gradient-to-r from-gold to-gold-light hover:from-gold-dark hover:to-gold text-white text-base py-6 shadow-lg shadow-gold/25"
                 size="lg"
               >
                 <Send className="w-5 h-5 mr-2" />

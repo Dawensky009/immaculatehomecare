@@ -28,7 +28,6 @@ export function Navbar() {
   const scrollTo = (href: string) => {
     setIsMobileOpen(false);
     if (!isHome) {
-      // Navigate to home first, then scroll after render
       navigate("/");
       setTimeout(() => {
         const el = document.querySelector(href);
@@ -40,14 +39,13 @@ export function Navbar() {
     }
   };
 
-  // On non-home pages, always show solid background
   const showSolid = isScrolled || !isHome;
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         showSolid
-          ? "bg-background/95 backdrop-blur-md shadow-md"
+          ? "bg-cream/95 backdrop-blur-md shadow-md"
           : "bg-transparent"
       }`}
     >
@@ -71,7 +69,7 @@ export function Navbar() {
                 onClick={() => scrollTo(link.href)}
                 className={`px-3 py-2 text-sm font-medium gentle-animation rounded-md transition-colors duration-300 ${
                   showSolid
-                    ? "text-muted-foreground hover:text-primary hover:bg-secondary"
+                    ? "text-muted-foreground hover:text-primary hover:bg-beige"
                     : "text-white/80 hover:text-white hover:bg-white/10"
                 }`}
               >
@@ -82,8 +80,8 @@ export function Navbar() {
               to="/careers"
               className={`px-3 py-2 text-sm font-medium gentle-animation rounded-md transition-colors duration-300 ${
                 showSolid
-                  ? "text-primary font-semibold hover:bg-secondary"
-                  : "text-sky-300 font-semibold hover:text-white hover:bg-white/10"
+                  ? "text-gold font-semibold hover:bg-beige"
+                  : "text-gold-lighter font-semibold hover:text-white hover:bg-white/10"
               }`}
             >
               Join Our Team
@@ -94,7 +92,7 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <Button
               onClick={() => scrollTo("#contact")}
-              className="hidden sm:inline-flex bg-primary hover:bg-primary/90 text-primary-foreground"
+              className="hidden sm:inline-flex bg-gradient-to-r from-gold to-gold-light hover:from-gold-dark hover:to-gold text-white"
               size="sm"
             >
               <Phone className="w-4 h-4 mr-1" />
@@ -116,13 +114,13 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileOpen && (
-        <div className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border">
+        <div className="lg:hidden bg-cream/98 backdrop-blur-md border-t border-border">
           <div className="px-4 py-4 space-y-1">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => scrollTo(link.href)}
-                className="block w-full text-left px-4 py-3 text-base font-medium text-foreground hover:bg-secondary rounded-lg gentle-animation"
+                className="block w-full text-left px-4 py-3 text-base font-medium text-foreground hover:bg-beige rounded-lg gentle-animation"
               >
                 {link.label}
               </button>
@@ -130,13 +128,13 @@ export function Navbar() {
             <Link
               to="/careers"
               onClick={() => setIsMobileOpen(false)}
-              className="block w-full text-left px-4 py-3 text-base font-semibold text-primary hover:bg-secondary rounded-lg gentle-animation"
+              className="block w-full text-left px-4 py-3 text-base font-semibold text-gold hover:bg-beige rounded-lg gentle-animation"
             >
               Join Our Team
             </Link>
             <Button
               onClick={() => scrollTo("#contact")}
-              className="w-full mt-3 bg-primary hover:bg-primary/90 text-primary-foreground"
+              className="w-full mt-3 bg-gradient-to-r from-gold to-gold-light hover:from-gold-dark hover:to-gold text-white"
             >
               <Phone className="w-4 h-4 mr-2" />
               Call Today

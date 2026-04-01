@@ -54,11 +54,11 @@ export function Testimonials() {
   const items = [...testimonials, ...testimonials];
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-b from-light-blue to-background overflow-hidden">
+    <section className="py-16 sm:py-20 bg-gradient-to-b from-beige-light to-cream overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <ScrollReveal>
           <div className="text-center">
-            <span className="inline-block bg-highlight/10 text-highlight text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
+            <span className="inline-block bg-gold/10 text-gold text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
               Testimonials
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
@@ -77,7 +77,7 @@ export function Testimonials() {
           >
             <div className="bg-background rounded-2xl p-6 shadow-md border border-border h-full relative overflow-hidden">
               {/* Gradient top accent */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-highlight" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold via-primary to-gold-light" />
               <StarRating rating={t.rating} />
               <p className="text-foreground/80 text-sm leading-relaxed mt-4 mb-6 italic">
                 "{t.quote}"

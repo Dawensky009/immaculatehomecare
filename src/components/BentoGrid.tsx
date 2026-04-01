@@ -46,11 +46,11 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
 
 export function BentoGrid() {
   return (
-    <section className="bg-[#0F1C2E] py-16 sm:py-20 lg:py-24">
+    <section className="bg-[#1a2d3d] py-16 sm:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-12">
-            <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">
+            <p className="text-gold-lighter font-semibold text-sm uppercase tracking-widest mb-3">
               At a Glance
             </p>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -69,8 +69,8 @@ export function BentoGrid() {
             >
               <div>
                 <div className="flex items-center gap-2 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
-                    <TrendingUp className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-xl bg-gold/20 flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 text-gold-lighter" />
                   </div>
                   <span className="text-white/60 text-sm font-medium">Trusted Provider</span>
                 </div>
@@ -78,7 +78,7 @@ export function BentoGrid() {
                 <p className="text-white/50 text-sm mt-2">Families Served Across Florida</p>
               </div>
               <div className="flex items-center gap-2 mt-6 pt-4 border-t border-white/10">
-                <ShieldCheck className="w-4 h-4 text-primary" />
+                <ShieldCheck className="w-4 h-4 text-gold-lighter" />
                 <span className="text-white/60 text-xs">AHCA Licensed Provider</span>
               </div>
             </motion.div>
@@ -93,8 +93,8 @@ export function BentoGrid() {
             >
               <div>
                 <div className="flex items-center gap-2 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center">
-                    <Heart className="w-5 h-5 text-accent" />
+                  <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+                    <Heart className="w-5 h-5 text-primary" />
                   </div>
                   <span className="text-white/60 text-sm font-medium">Healthcare Partners</span>
                 </div>
@@ -128,8 +128,8 @@ export function BentoGrid() {
             >
               <div>
                 <div className="flex items-center gap-2 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
-                    <Clock className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-xl bg-gold/20 flex items-center justify-center">
+                    <Clock className="w-5 h-5 text-gold-lighter" />
                   </div>
                   <span className="text-white/60 text-sm font-medium">Always Available</span>
                 </div>
@@ -155,8 +155,8 @@ export function BentoGrid() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center">
-                  <Users className="w-5 h-5 text-accent" />
+                <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+                  <Users className="w-5 h-5 text-primary" />
                 </div>
                 <span className="text-white/60 text-sm font-medium">Service Coverage</span>
               </div>
