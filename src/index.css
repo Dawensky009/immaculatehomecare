@@ -30,10 +30,11 @@
 
   /* Medical theme colors */
   --navy: #1E3A5F;
-  --sky-blue: #0EA5E9;
-  --teal: #0D9488;
+  --sky-blue: #0284C7;
+  --teal: #0F766E;
   --light-blue: #F0F9FF;
   --soft-teal: #F0FDFA;
+  --highlight: #F59E0B;
 
   --radius: 0.75rem;
 }
