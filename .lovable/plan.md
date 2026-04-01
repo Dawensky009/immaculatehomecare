@@ -1,66 +1,40 @@
 
 
-# Make the Website Pop — Color & Visual Enhancement Plan
+# Plan: Extract Complete Site Structure
 
-## Problem
-The current design is too uniform — lots of white/light-blue backgrounds (`bg-background`, `bg-secondary`) alternating with minimal contrast. The color palette is safe but bland. Sections blend together without visual distinction.
+I'll create a comprehensive document that captures every component, its exact code, the full styling system, routing, animations, and data structures — everything needed to recreate or improve this site.
 
-## Strategy
-Inject more color contrast, gradients, accent highlights, and visual depth while keeping the clean medical aesthetic. The goal is to make each section feel distinct and energetic without looking unprofessional.
+## What the document will contain
 
----
+**1. Project overview** — Tech stack, dependencies, file tree
 
-## Changes
+**2. Global configuration** — Full `index.css` (CSS variables, keyframes, utilities), `tailwind.config.ts` color mappings, `App.tsx` routing setup
 
-### 1. Bolder Color Palette (index.css)
-- Shift `--primary` from `#0EA5E9` to a richer, more saturated blue: `#0284C7`
-- Shift `--accent` (teal) to a brighter teal: `#0F766E` → use as a secondary accent
-- Add a warm highlight color for CTAs and badges: `--highlight: #F59E0B` (amber/gold)
-- Make `--muted-foreground` slightly darker for better readability: `#475569`
+**3. Every component with full source code:**
+- `Navbar.tsx` — Sticky nav with scroll-aware transparency, cross-page anchor navigation
+- `HeroSlider.tsx` — 4-image carousel with crossfade, gradient overlay, trust badges, CTAs
+- `SlidingBanner.tsx` — Infinite marquee with certification badges (standalone + embedded variants)
+- `WhoWeServe.tsx` — 3-card grid with gradient icon containers, colored top borders
+- `BentoGrid.tsx` — Dark section with glass cards, animated counters, Florida map, embedded marquee
+- `FloridaMap.tsx` — SVG map with framer-motion pulsing location markers
+- `CareTeam.tsx` — 4-column role cards (CNA/HHA/LPN/RN) with gradient accent bars
+- `Testimonials.tsx` — Auto-scrolling marquee of review cards with amber star ratings
+- `JoinOurTeam.tsx` — Dark CTA banner linking to `/careers`
+- `OurServices.tsx` — Accordion-style expandable service cards with gradient sidebar accents
+- `WhyChooseUs.tsx` — Dark gradient section with glass cards
+- `OurCommitment.tsx` — Dark gradient section with value icons
+- `ContactForm.tsx` — Intake form with toggle buttons, multi-select, validation
+- `SiteFooter.tsx` — 3-column footer with links and contact info
+- `ScrollReveal.tsx` — Framer Motion fade-in wrapper
+- `ApplicationForm.tsx` — Full job application form with react-hook-form + zod
 
-### 2. Section Background Variety
-Instead of alternating white and `#F0F9FF`, introduce more visual breaks:
+**4. Page compositions:**
+- `HomePage.tsx` — Section ordering with ScrollReveal wrappers
+- `CareersPage.tsx` — Hero, benefits grid, open positions, application form
 
-- **WhoWeServe**: Add a subtle gradient background (`bg-gradient-to-b from-white to-light-blue`) and colored left borders on cards
-- **CareTeam**: Use a light teal-tinted background instead of the same `bg-secondary`, add colored accent bars on cards
-- **OurServices**: Add a gradient sidebar accent on each expandable card, make the icon containers more colorful
-- **WhyChooseUs**: Switch to a bold gradient background (navy-to-teal) with white text — make it a standout dark section
-- **Testimonials**: Add a gradient top border on each card, make star ratings amber/gold instead of primary blue
-- **ContactForm**: Add a colored accent strip on the form card, make the submit button use a gradient
+**5. Assets required** — Hero images (4 slides)
 
-### 3. Button & CTA Enhancements
-- Hero "Call Today" button: Add gradient (`bg-gradient-to-r from-primary to-teal`)
-- All primary buttons: Use gradient instead of flat color
-- Add subtle glow/shadow effects on hover (`shadow-primary/25`)
+## Output
 
-### 4. Card Enhancements Across Sections
-- Add colored top borders (`border-t-4 border-primary`) to cards in WhoWeServe and CareTeam
-- Add gradient accent strips on hover
-- Make icon containers use gradient backgrounds instead of flat `bg-secondary`
-
-### 5. Section Dividers & Accents
-- Add decorative gradient divider lines between sections
-- Add colored badge pills for section labels (e.g., "Our Services" gets a teal pill above the heading)
-- Add decorative blur circles (like JoinOurTeam already has) to more sections
-
-### 6. Testimonials Stars → Amber Gold
-- Change star fill from `text-primary` to amber/gold (`text-amber-400 fill-amber-400`) for warmth
-
----
-
-## Files to Modify
-
-| File | Changes |
-|------|---------|
-| `src/index.css` | Update `--primary`, `--accent`, `--muted-foreground`; add `--highlight` color |
-| `tailwind.config.ts` | Add `highlight` color mapping |
-| `src/components/WhoWeServe.tsx` | Gradient bg, colored card borders, gradient icon containers |
-| `src/components/CareTeam.tsx` | Teal-tinted bg, accent bars on role cards |
-| `src/components/OurServices.tsx` | Colored accents on expandable cards, section badge pill |
-| `src/components/WhyChooseUs.tsx` | Convert to dark gradient section with white text |
-| `src/components/Testimonials.tsx` | Amber stars, gradient card borders |
-| `src/components/ContactForm.tsx` | Gradient submit button, accent strip on form card |
-| `src/components/HeroSlider.tsx` | Gradient CTA buttons |
-| `src/components/SlidingBanner.tsx` | Add gradient background instead of flat navy |
-| `src/components/OurCommitment.tsx` | Add gradient accent elements |
+A single markdown file at `/mnt/documents/site-structure.md` containing the complete architecture and all source code, ready to hand to another AI for improvement.
 
