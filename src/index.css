@@ -67,6 +67,7 @@
   --color-teal: var(--teal);
   --color-light-blue: var(--light-blue);
   --color-soft-teal: var(--soft-teal);
+  --color-highlight: var(--highlight);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
