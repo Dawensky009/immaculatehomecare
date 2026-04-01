@@ -30,6 +30,7 @@ export default {
         teal: "var(--teal)",
         "light-blue": "var(--light-blue)",
         "soft-teal": "var(--soft-teal)",
+        highlight: "var(--highlight)",
         primary: {
           DEFAULT: "var(--primary)",
           foreground: "var(--primary-foreground)",

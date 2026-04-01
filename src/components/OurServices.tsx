@@ -6,6 +6,7 @@ const services = [
     icon: Stethoscope,
     title: "Skilled Nursing Care",
     subtitle: "LPN & RN Services",
+    gradient: "from-primary to-sky-blue",
     items: [
       "Medication management and administration",
       "Wound care and dressing changes",
@@ -21,6 +22,7 @@ const services = [
     icon: HandHelping,
     title: "Personal Care & Daily Living",
     subtitle: "CNA & HHA Services",
+    gradient: "from-accent to-teal",
     items: [
       "Bathing, grooming, and personal hygiene",
       "Meal preparation and feeding assistance",
@@ -35,6 +37,7 @@ const services = [
     icon: Baby,
     title: "Pediatric & Special Needs Support",
     subtitle: "Children's Care",
+    gradient: "from-highlight to-primary",
     items: [
       "Supervision and safety monitoring",
       "Daily routine support and structure",
@@ -49,6 +52,7 @@ const services = [
     icon: Users,
     title: "Senior Companion & Support Care",
     subtitle: "Elderly Care",
+    gradient: "from-teal to-primary",
     items: [
       "Companionship and conversation",
       "Medication reminders",
@@ -65,11 +69,16 @@ export function OurServices() {
   const [expanded, setExpanded] = useState<number | null>(0);
 
   return (
-    <section id="services" className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-20 bg-background relative overflow-hidden">
+      <div className="absolute top-20 left-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-14">
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-4">
+          <span className="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
             Our Services
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-4">
+            Comprehensive Home Health Care
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Comprehensive home health care services tailored to each client's unique needs.
@@ -80,14 +89,16 @@ export function OurServices() {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="border border-border rounded-xl bg-card overflow-hidden hover:shadow-md gentle-animation"
+              className="border border-border rounded-xl bg-card overflow-hidden hover:shadow-lg gentle-animation group relative"
             >
+              {/* Left accent bar */}
+              <div className={`absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b ${service.gradient} opacity-0 group-hover:opacity-100 gentle-animation`} />
               <button
                 onClick={() => setExpanded(expanded === index ? null : index)}
                 className="w-full flex items-center gap-4 p-6 text-left"
               >
-                <div className="w-12 h-12 rounded-xl bg-secondary flex-shrink-0 flex items-center justify-center">
-                  <service.icon className="w-6 h-6 text-primary" />
+                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${service.gradient} flex-shrink-0 flex items-center justify-center shadow-md`}>
+                  <service.icon className="w-6 h-6 text-white" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold text-navy">

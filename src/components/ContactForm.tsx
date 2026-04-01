@@ -68,7 +68,7 @@ export function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-20 bg-gradient-to-b from-background to-light-blue">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left: Contact Info */}
@@ -119,7 +119,9 @@ export function ContactForm() {
           </div>
 
           {/* Right: Intake Form */}
-          <div className="bg-card rounded-2xl border border-border p-8 shadow-sm">
+          <div className="bg-card rounded-2xl border border-border p-8 shadow-lg relative overflow-hidden">
+            {/* Top gradient accent */}
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-accent to-highlight" />
             <h3 className="text-xl font-semibold text-navy mb-6">
               Care Request Form
             </h3>
@@ -264,7 +266,7 @@ export function ContactForm() {
 
               <Button
                 type="submit"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-base py-6"
+                className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white text-base py-6 shadow-lg shadow-primary/25"
                 size="lg"
               >
                 <Send className="w-5 h-5 mr-2" />

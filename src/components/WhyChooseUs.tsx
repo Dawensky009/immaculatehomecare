@@ -35,13 +35,20 @@ const reasons = [
 
 export function WhyChooseUs() {
   return (
-    <section id="why-choose-us" className="py-20 bg-secondary">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="why-choose-us" className="py-20 bg-gradient-to-br from-navy via-[#0c2d4a] to-accent text-white relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 right-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-60 h-60 bg-accent/10 rounded-full blur-3xl" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-14">
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-4">
+          <span className="inline-block bg-white/10 text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase backdrop-blur-sm">
             Why Choose Us
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            Why Families Trust Us
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-white/70 max-w-2xl mx-auto text-lg">
             Families across Florida trust Immaculate Home Care Services for quality, compassion, and peace of mind.
           </p>
         </div>
@@ -50,16 +57,16 @@ export function WhyChooseUs() {
           {reasons.map((reason) => (
             <div
               key={reason.title}
-              className="flex items-start gap-4 bg-background rounded-xl p-6 border border-border hover:shadow-md gentle-animation"
+              className="flex items-start gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/15 hover:border-white/20 gentle-animation group"
             >
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex-shrink-0 flex items-center justify-center">
-                <reason.icon className="w-5 h-5 text-primary" />
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex-shrink-0 flex items-center justify-center shadow-lg">
+                <reason.icon className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h3 className="font-semibold text-navy mb-1.5 text-base">
+                <h3 className="font-semibold text-white mb-1.5 text-base">
                   {reason.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-white/70 leading-relaxed">
                   {reason.description}
                 </p>
               </div>

@@ -35,7 +35,7 @@ export function SlidingBanner({ variant = "standalone" }: SlidingBannerProps) {
   }
 
   return (
-    <section className="bg-navy py-4 overflow-hidden border-y border-white/10">
+    <section className="bg-gradient-to-r from-navy via-[#0c2d4a] to-navy py-4 overflow-hidden border-y border-white/10">
       <div className="flex animate-marquee whitespace-nowrap">
         {items.map((item, i) => (
           <div
