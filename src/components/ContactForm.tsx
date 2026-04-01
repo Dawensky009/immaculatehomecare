@@ -119,7 +119,9 @@ export function ContactForm() {
           </div>
 
           {/* Right: Intake Form */}
-          <div className="bg-card rounded-2xl border border-border p-8 shadow-sm">
+          <div className="bg-card rounded-2xl border border-border p-8 shadow-lg relative overflow-hidden">
+            {/* Top gradient accent */}
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-accent to-highlight" />
             <h3 className="text-xl font-semibold text-navy mb-6">
               Care Request Form
             </h3>
