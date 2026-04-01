@@ -44,7 +44,7 @@ function StarRating({ rating }: { rating: number }) {
   return (
     <div className="flex gap-0.5">
       {Array.from({ length: rating }).map((_, i) => (
-        <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+        <Star key={i} className="w-4 h-4 fill-highlight text-highlight" />
       ))}
     </div>
   );
@@ -54,13 +54,13 @@ export function Testimonials() {
   const items = [...testimonials, ...testimonials];
 
   return (
-    <section className="py-16 sm:py-20 bg-secondary overflow-hidden">
+    <section className="py-16 sm:py-20 bg-gradient-to-b from-light-blue to-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <ScrollReveal>
           <div className="text-center">
-            <p className="text-primary font-semibold text-sm uppercase tracking-widest mb-3">
+            <span className="inline-block bg-highlight/10 text-highlight text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
               Testimonials
-            </p>
+            </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
               What Families Are Saying
             </h2>
@@ -75,7 +75,9 @@ export function Testimonials() {
             key={i}
             className="inline-block w-[340px] sm:w-[380px] mx-3 flex-shrink-0 whitespace-normal"
           >
-            <div className="bg-background rounded-2xl p-6 shadow-md border border-border h-full">
+            <div className="bg-background rounded-2xl p-6 shadow-md border border-border h-full relative overflow-hidden">
+              {/* Gradient top accent */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-highlight" />
               <StarRating rating={t.rating} />
               <p className="text-foreground/80 text-sm leading-relaxed mt-4 mb-6 italic">
                 "{t.quote}"

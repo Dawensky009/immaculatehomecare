@@ -80,7 +80,7 @@ export function HeroSlider() {
           <div className="flex flex-wrap gap-4 pt-2">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground text-base px-6"
+              className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white text-base px-6 shadow-lg shadow-primary/25"
               onClick={() => window.location.href = "tel:+1234567890"}
             >
               <Phone className="w-5 h-5 mr-2" />

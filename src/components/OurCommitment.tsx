@@ -1,16 +1,23 @@
 import { Award, Handshake, Clock, HeartPulse } from "lucide-react";
 
 const values = [
-  { icon: Handshake, label: "Respectful" },
-  { icon: Award, label: "Professional" },
-  { icon: Clock, label: "Reliable" },
-  { icon: HeartPulse, label: "Compassionate" },
+  { icon: Handshake, label: "Respectful", gradient: "from-primary to-sky-blue" },
+  { icon: Award, label: "Professional", gradient: "from-accent to-teal" },
+  { icon: Clock, label: "Reliable", gradient: "from-primary to-accent" },
+  { icon: HeartPulse, label: "Compassionate", gradient: "from-highlight to-primary" },
 ];
 
 export function OurCommitment() {
   return (
-    <section className="py-20 bg-gradient-to-br from-[#1E3A5F] to-[#0c2340] text-white">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="py-20 bg-gradient-to-br from-navy via-[#0c2d4a] to-accent text-white relative overflow-hidden">
+      {/* Decorative blurs */}
+      <div className="absolute top-10 right-10 w-72 h-72 bg-primary/15 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 left-10 w-60 h-60 bg-highlight/10 rounded-full blur-3xl" />
+
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+        <span className="inline-block bg-white/10 text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase backdrop-blur-sm">
+          Our Values
+        </span>
         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
           Our Commitment to You
         </h2>
@@ -23,9 +30,11 @@ export function OurCommitment() {
           {values.map((value) => (
             <div
               key={value.label}
-              className="flex flex-col items-center gap-3 p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/15 gentle-animation"
+              className="flex flex-col items-center gap-3 p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/15 hover:border-white/20 gentle-animation group"
             >
-              <value.icon className="w-8 h-8 text-sky-300" />
+              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${value.gradient} flex items-center justify-center shadow-lg group-hover:scale-110 gentle-animation`}>
+                <value.icon className="w-6 h-6 text-white" />
+              </div>
               <span className="font-semibold text-white text-base">
                 {value.label}
               </span>
