@@ -40,7 +40,7 @@ export function HeroSlider() {
       ))}
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#1E3A5F]/80 via-[#1E3A5F]/60 to-[#1E3A5F]/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#2C3E50]/85 via-[#2C3E50]/65 to-[#2C3E50]/40" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -53,7 +53,7 @@ export function HeroSlider() {
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
             Compassionate, Licensed Home Health Care—
-            <span className="text-sky-300">Right Where It Matters Most</span>
+            <span className="text-gold-lighter">Right Where It Matters Most</span>
           </h1>
 
           <p className="text-lg sm:text-xl text-white/85 leading-relaxed max-w-xl">
@@ -63,15 +63,15 @@ export function HeroSlider() {
           {/* Trust Badges */}
           <div className="flex flex-wrap gap-4 text-sm text-white/80">
             <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-sky-300" />
+              <ShieldCheck className="w-4 h-4 text-gold-lighter" />
               AHCA Licensed
             </span>
             <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-sky-300" />
+              <ShieldCheck className="w-4 h-4 text-gold-lighter" />
               Professional
             </span>
             <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-sky-300" />
+              <ShieldCheck className="w-4 h-4 text-gold-lighter" />
               Patient-Centered Care
             </span>
           </div>
@@ -80,7 +80,7 @@ export function HeroSlider() {
           <div className="flex flex-wrap gap-4 pt-2">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white text-base px-6 shadow-lg shadow-primary/25"
+              className="bg-gradient-to-r from-gold to-gold-light hover:from-gold-dark hover:to-gold text-white text-base px-6 shadow-lg shadow-gold/25"
               onClick={() => window.location.href = "tel:+1234567890"}
             >
               <Phone className="w-5 h-5 mr-2" />
@@ -106,7 +106,7 @@ export function HeroSlider() {
             onClick={() => setCurrent(index)}
             className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
               index === current
-                ? "bg-white w-8"
+                ? "bg-gold-lighter w-8"
                 : "bg-white/40 hover:bg-white/60"
             }`}
             aria-label={`Go to slide ${index + 1}`}

@@ -7,34 +7,43 @@
 
 :root {
   --font-size: 16px;
-  --background: #ffffff;
-  --foreground: #1E3A5F;
-  --card: #ffffff;
-  --card-foreground: #1E3A5F;
-  --popover: #ffffff;
-  --popover-foreground: #1E3A5F;
-  --primary: #0284C7;
+  --background: #FFFDF8;
+  --foreground: #2C3E50;
+  --card: #FFFDF8;
+  --card-foreground: #2C3E50;
+  --popover: #FFFDF8;
+  --popover-foreground: #2C3E50;
+  --primary: #47A8BD;
   --primary-foreground: #ffffff;
-  --secondary: #F0F9FF;
-  --secondary-foreground: #1E3A5F;
-  --muted: #F0F9FF;
-  --muted-foreground: #475569;
-  --accent: #0F766E;
+  --secondary: #F5F0E8;
+  --secondary-foreground: #2C3E50;
+  --muted: #F5F0E8;
+  --muted-foreground: #6B7B8D;
+  --accent: #C5962C;
   --accent-foreground: #ffffff;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #E2E8F0;
-  --input: #E2E8F0;
-  --input-background: #ffffff;
-  --ring: #0EA5E9;
+  --border: #E5DFD5;
+  --input: #E5DFD5;
+  --input-background: #FFFDF8;
+  --ring: #47A8BD;
 
-  /* Medical theme colors */
-  --navy: #1E3A5F;
-  --sky-blue: #0284C7;
-  --teal: #0F766E;
-  --light-blue: #F0F9FF;
-  --soft-teal: #F0FDFA;
-  --highlight: #F59E0B;
+  /* Theme colors */
+  --navy: #2C3E50;
+  --sky-blue: #6BBFD0;
+  --teal: #3A8FA0;
+  --light-blue: #E8F6F9;
+  --soft-teal: #F5F0E8;
+  --highlight: #C5962C;
+  --gold: #C5962C;
+  --gold-dark: #8B6914;
+  --gold-light: #D4A843;
+  --gold-lighter: #E8CC7A;
+  --gold-pale: #FDF6E3;
+  --beige: #F5F0E8;
+  --beige-light: #FAF7F2;
+  --beige-dark: #D9D0C1;
+  --cream: #FFFDF8;
 
   --radius: 0.75rem;
 }
@@ -61,13 +70,22 @@
   --color-input-background: var(--input-background);
   --color-ring: var(--ring);
 
-  /* Medical theme tokens */
+  /* Theme tokens */
   --color-navy: var(--navy);
   --color-sky-blue: var(--sky-blue);
   --color-teal: var(--teal);
   --color-light-blue: var(--light-blue);
   --color-soft-teal: var(--soft-teal);
   --color-highlight: var(--highlight);
+  --color-gold: var(--gold);
+  --color-gold-dark: var(--gold-dark);
+  --color-gold-light: var(--gold-light);
+  --color-gold-lighter: var(--gold-lighter);
+  --color-gold-pale: var(--gold-pale);
+  --color-beige: var(--beige);
+  --color-beige-light: var(--beige-light);
+  --color-beige-dark: var(--beige-dark);
+  --color-cream: var(--cream);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -103,7 +121,7 @@
   }
 
   .elevated-shadow {
-    box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.1), 0 8px 10px -6px rgba(14, 165, 233, 0.05);
+    box-shadow: 0 10px 25px -5px rgba(197, 150, 44, 0.15), 0 8px 10px -6px rgba(197, 150, 44, 0.08);
   }
 
   .gentle-animation {
@@ -166,12 +184,12 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: var(--border);
+    background: var(--beige-dark);
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--ring);
+    background: var(--gold);
   }
 }
 

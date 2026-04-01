@@ -25,7 +25,7 @@ export function SlidingBanner({ variant = "standalone" }: SlidingBannerProps) {
               key={i}
               className="inline-flex items-center gap-2 mx-6 text-white/70 text-sm font-medium"
             >
-              <item.icon className="w-4 h-4 text-primary flex-shrink-0" />
+              <item.icon className="w-4 h-4 text-gold-lighter flex-shrink-0" />
               <span>{item.label}</span>
             </div>
           ))}
@@ -35,16 +35,16 @@ export function SlidingBanner({ variant = "standalone" }: SlidingBannerProps) {
   }
 
   return (
-    <section className="bg-gradient-to-r from-navy via-[#0c2d4a] to-navy py-4 overflow-hidden border-y border-white/10">
+    <section className="bg-gradient-to-r from-beige via-beige-light to-beige py-4 overflow-hidden border-y border-beige-dark/30">
       <div className="flex animate-marquee whitespace-nowrap">
         {items.map((item, i) => (
           <div
             key={i}
-            className="inline-flex items-center gap-2.5 mx-8 text-white/90 text-sm font-semibold tracking-wide uppercase"
+            className="inline-flex items-center gap-2.5 mx-8 text-navy/80 text-sm font-semibold tracking-wide uppercase"
           >
             <item.icon className="w-5 h-5 text-primary flex-shrink-0" />
             <span>{item.label}</span>
-            <span className="text-primary/40 ml-4">•</span>
+            <span className="text-gold/40 ml-4">•</span>
           </div>
         ))}
       </div>

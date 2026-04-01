@@ -35,10 +35,10 @@ const reasons = [
 
 export function WhyChooseUs() {
   return (
-    <section id="why-choose-us" className="py-20 bg-gradient-to-br from-navy via-[#0c2d4a] to-accent text-white relative overflow-hidden">
+    <section id="why-choose-us" className="py-20 bg-gradient-to-br from-[#2C3E50] via-[#1a2d3d] to-[#2d5a4e] text-white relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-60 h-60 bg-accent/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-80 h-80 bg-gold/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-60 h-60 bg-primary/10 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-14">
@@ -59,7 +59,7 @@ export function WhyChooseUs() {
               key={reason.title}
               className="flex items-start gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/15 hover:border-white/20 gentle-animation group"
             >
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex-shrink-0 flex items-center justify-center shadow-lg">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-gold to-primary flex-shrink-0 flex items-center justify-center shadow-lg">
                 <reason.icon className="w-5 h-5 text-white" />
               </div>
               <div>

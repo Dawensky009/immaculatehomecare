@@ -31,6 +31,19 @@ export default {
         "light-blue": "var(--light-blue)",
         "soft-teal": "var(--soft-teal)",
         highlight: "var(--highlight)",
+        gold: {
+          DEFAULT: "var(--gold)",
+          dark: "var(--gold-dark)",
+          light: "var(--gold-light)",
+          lighter: "var(--gold-lighter)",
+          pale: "var(--gold-pale)",
+        },
+        beige: {
+          DEFAULT: "var(--beige)",
+          light: "var(--beige-light)",
+          dark: "var(--beige-dark)",
+        },
+        cream: "var(--cream)",
         primary: {
           DEFAULT: "var(--primary)",
           foreground: "var(--primary-foreground)",

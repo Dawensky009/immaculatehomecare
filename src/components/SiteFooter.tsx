@@ -17,7 +17,7 @@ export function SiteFooter() {
   };
 
   return (
-    <footer className="bg-[#1E3A5F] text-white">
+    <footer className="bg-[#2C3E50] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
@@ -29,7 +29,7 @@ export function SiteFooter() {
               Compassionate, licensed home health care for children, adults, and seniors throughout Florida.
             </p>
             <div className="flex items-center gap-2 text-sm text-white/60">
-              <ShieldCheck className="w-4 h-4 text-sky-300" />
+              <ShieldCheck className="w-4 h-4 text-gold-lighter" />
               AHCA Licensed Provider
             </div>
           </div>
@@ -42,7 +42,7 @@ export function SiteFooter() {
                 <li key={link.href}>
                   <button
                     onClick={() => scrollTo(link.href)}
-                    className="text-sm text-white/70 hover:text-white gentle-animation"
+                    className="text-sm text-white/70 hover:text-gold-lighter gentle-animation"
                   >
                     {link.label}
                   </button>
@@ -51,7 +51,7 @@ export function SiteFooter() {
               <li>
                 <Link
                   to="/careers"
-                  className="text-sm text-white/70 hover:text-white gentle-animation"
+                  className="text-sm text-white/70 hover:text-gold-lighter gentle-animation"
                 >
                   Careers
                 </Link>
@@ -64,11 +64,11 @@ export function SiteFooter() {
             <h4 className="text-base font-semibold text-white mb-4">Contact Us</h4>
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm text-white/70">
-                <Phone className="w-4 h-4 text-sky-300" />
+                <Phone className="w-4 h-4 text-gold-lighter" />
                 (123) 456-7890
               </div>
               <div className="flex items-center gap-3 text-sm text-white/70">
-                <Mail className="w-4 h-4 text-sky-300" />
+                <Mail className="w-4 h-4 text-gold-lighter" />
                 info@immaculatehomecare.com
               </div>
             </div>

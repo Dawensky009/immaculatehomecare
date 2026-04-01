@@ -84,16 +84,16 @@ export default function CareersPage() {
       {/* Hero */}
       <section className="relative pt-28 pb-20 bg-navy overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-sky-blue rounded-full blur-3xl translate-x-1/3 -translate-y-1/3" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal rounded-full blur-3xl -translate-x-1/3 translate-y-1/3" />
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary rounded-full blur-3xl translate-x-1/3 -translate-y-1/3" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold rounded-full blur-3xl -translate-x-1/3 translate-y-1/3" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Badge className="mb-5 bg-sky-blue/20 text-sky-300 border-sky-blue/30 hover:bg-sky-blue/30">
+          <Badge className="mb-5 bg-gold/20 text-gold-lighter border-gold/30 hover:bg-gold/30">
             We're Hiring
           </Badge>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-5">
             Build a Career in{" "}
-            <span className="text-sky-300">Compassionate Care</span>
+            <span className="text-gold-lighter">Compassionate Care</span>
           </h1>
           <p className="text-lg sm:text-xl text-white/75 max-w-2xl mx-auto leading-relaxed">
             Join Immaculate Home Care Services and help us deliver exceptional, patient-centered home health care across Florida.
@@ -103,10 +103,10 @@ export default function CareersPage() {
 
       {/* Benefits */}
       <ScrollReveal>
-        <section className="py-20 bg-secondary">
+        <section className="py-20 bg-beige">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
-              <Badge variant="secondary" className="mb-3 border-primary/20 text-primary">
+              <Badge variant="secondary" className="mb-3 border-gold/20 text-gold">
                 Why Work With Us
               </Badge>
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
@@ -120,8 +120,8 @@ export default function CareersPage() {
                   className="border-border/50 bg-background hover:shadow-lg gentle-animation"
                 >
                   <CardContent className="p-6 flex items-start gap-4">
-                    <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-primary" />
+                    <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-gold/10 flex items-center justify-center">
+                      <Icon className="w-5 h-5 text-gold" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">{title}</h3>
@@ -139,7 +139,7 @@ export default function CareersPage() {
 
       {/* Open Positions */}
       <ScrollReveal>
-        <section className="py-20">
+        <section className="py-20 bg-cream">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
               <Badge variant="secondary" className="mb-3 border-primary/20 text-primary">
@@ -153,18 +153,18 @@ export default function CareersPage() {
               {openPositions.map(({ title, type, description }) => (
                 <Card
                   key={title}
-                  className="border-border/50 hover:border-primary/30 hover:shadow-lg gentle-animation group"
+                  className="border-border/50 hover:border-gold/30 hover:shadow-lg gentle-animation group"
                 >
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-navy/10 flex items-center justify-center group-hover:bg-primary/10 gentle-animation">
-                        <Briefcase className="w-5 h-5 text-navy group-hover:text-primary gentle-animation" />
+                      <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-navy/10 flex items-center justify-center group-hover:bg-gold/10 gentle-animation">
+                        <Briefcase className="w-5 h-5 text-navy group-hover:text-gold gentle-animation" />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-foreground mb-1">
                           {title}
                         </h3>
-                        <span className="inline-block text-xs font-medium text-primary bg-primary/10 rounded-full px-2.5 py-0.5 mb-2">
+                        <span className="inline-block text-xs font-medium text-gold bg-gold/10 rounded-full px-2.5 py-0.5 mb-2">
                           {type}
                         </span>
                         <p className="text-sm text-muted-foreground leading-relaxed">
@@ -175,7 +175,7 @@ export default function CareersPage() {
                     <div className="mt-4 flex justify-end">
                       <a
                         href="#apply"
-                        className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+                        className="inline-flex items-center text-sm font-medium text-gold hover:underline"
                       >
                         Apply Now <ArrowRight className="w-4 h-4 ml-1" />
                       </a>
@@ -190,10 +190,10 @@ export default function CareersPage() {
 
       {/* Application Form */}
       <ScrollReveal>
-        <section id="apply" className="py-20 bg-secondary">
+        <section id="apply" className="py-20 bg-beige-light">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <Badge variant="secondary" className="mb-3 border-primary/20 text-primary">
+              <Badge variant="secondary" className="mb-3 border-gold/20 text-gold">
                 Apply Today
               </Badge>
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">

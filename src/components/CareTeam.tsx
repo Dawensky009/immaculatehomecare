@@ -6,7 +6,7 @@ const roles = [
     icon: HeartHandshake,
     abbr: "CNA",
     title: "Certified Nursing Assistants",
-    color: "from-primary to-sky-blue",
+    color: "from-gold to-primary",
     description:
       "Provide essential daily care including bathing, grooming, feeding, mobility assistance, and vital sign monitoring under the supervision of licensed nurses.",
   },
@@ -14,7 +14,7 @@ const roles = [
     icon: Activity,
     abbr: "HHA",
     title: "Home Health Aides",
-    color: "from-accent to-teal",
+    color: "from-primary to-teal",
     description:
       "Support clients with personal care, light housekeeping, meal preparation, and companionship—helping maintain independence and comfort at home.",
   },
@@ -22,7 +22,7 @@ const roles = [
     icon: Pill,
     abbr: "LPN",
     title: "Licensed Practical Nurses",
-    color: "from-primary to-accent",
+    color: "from-gold-light to-gold",
     description:
       "Deliver skilled nursing care including medication administration, wound care, catheter management, and health monitoring as directed by physicians.",
   },
@@ -38,12 +38,12 @@ const roles = [
 
 export function CareTeam() {
   return (
-    <section id="care-team" className="py-20 bg-gradient-to-br from-soft-teal to-light-blue relative overflow-hidden">
-      <div className="absolute top-0 left-1/2 w-96 h-96 bg-accent/5 rounded-full blur-3xl -translate-x-1/2" />
+    <section id="care-team" className="py-20 bg-gradient-to-br from-light-blue to-gold-pale relative overflow-hidden">
+      <div className="absolute top-0 left-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-14">
-          <span className="inline-block bg-accent/10 text-accent text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
+          <span className="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
             Our Team
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-4">
@@ -66,7 +66,7 @@ export function CareTeam() {
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${role.color} flex items-center justify-center mx-auto mb-5 group-hover:scale-110 gentle-animation shadow-lg`}>
                   <role.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-sm font-bold text-primary tracking-wider uppercase mb-1">
+                <div className="text-sm font-bold text-gold tracking-wider uppercase mb-1">
                   {role.abbr}
                 </div>
                 <h3 className="text-lg font-semibold text-navy mb-3">
