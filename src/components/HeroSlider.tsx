@@ -40,7 +40,7 @@ export function HeroSlider() {
       ))}
 
       {/* Brighter Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/55 via-primary/28 to-sky-blue/10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/35 via-sky-blue/18 to-background/5" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

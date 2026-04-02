@@ -9,7 +9,7 @@ const values = [
 
 export function OurCommitment() {
   return (
-    <section className="py-20 bg-gradient-to-br from-sky-blue via-primary to-teal text-white relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-sky-blue via-primary to-sky-blue text-white relative overflow-hidden">
       {/* Decorative blurs */}
       <div className="absolute top-10 right-10 w-72 h-72 bg-background/20 rounded-full blur-3xl" />
       <div className="absolute bottom-10 left-10 w-60 h-60 bg-gold/15 rounded-full blur-3xl" />
@@ -30,7 +30,7 @@ export function OurCommitment() {
           {values.map((value) => (
             <div
               key={value.label}
-              className="flex flex-col items-center gap-3 p-6 rounded-xl bg-background/15 backdrop-blur-md border border-white/20 hover:bg-background/20 hover:border-white/30 gentle-animation group"
+              className="flex flex-col items-center gap-3 p-6 rounded-xl bg-background/18 backdrop-blur-md border border-white/28 hover:bg-background/24 hover:border-white/35 gentle-animation group"
             >
               <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${value.gradient} flex items-center justify-center shadow-lg group-hover:scale-110 gentle-animation`}>
                 <value.icon className="w-6 h-6 text-white" />
