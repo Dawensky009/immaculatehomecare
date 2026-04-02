@@ -30,14 +30,14 @@ const audiences = [
 
 export function WhoWeServe() {
   return (
-    <section id="who-we-serve" className="py-20 bg-gradient-to-b from-cream to-beige-light relative overflow-hidden">
+    <section id="who-we-serve" className="py-20 bg-gradient-to-b from-primary/12 via-background to-primary/5 relative overflow-hidden">
       {/* Decorative blur */}
-      <div className="absolute top-20 right-0 w-72 h-72 bg-gold/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-10 left-0 w-60 h-60 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-0 w-72 h-72 bg-gold/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 left-0 w-60 h-60 bg-primary/10 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-14">
-          <span className="inline-block bg-gold/10 text-gold text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
+          <span className="inline-block bg-primary/10 text-primary border border-primary/20 text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
             Who We Serve
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-4">

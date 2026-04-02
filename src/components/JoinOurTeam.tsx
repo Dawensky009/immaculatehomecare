@@ -12,16 +12,16 @@ const roles = [
 
 export function JoinOurTeam() {
   return (
-    <section className="relative py-20 overflow-hidden bg-navy">
+    <section className="relative py-20 overflow-hidden bg-gradient-to-r from-primary via-sky-blue to-teal">
       {/* Decorative background */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-72 h-72 bg-primary rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-0 w-72 h-72 bg-background rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Top label */}
-        <Badge className="mb-6 bg-gold/20 text-gold-lighter border-gold/30 hover:bg-gold/30">
+        <Badge className="mb-6 bg-background/15 text-primary-foreground border-white/20 hover:bg-background/20">
           Now Hiring
         </Badge>
 
@@ -30,7 +30,7 @@ export function JoinOurTeam() {
           <span className="text-gold-lighter">Compassionate Caregivers</span>
         </h2>
 
-        <p className="text-lg text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-lg text-white/85 max-w-2xl mx-auto mb-10 leading-relaxed">
           We're looking for dedicated healthcare professionals who share our mission of delivering exceptional, patient-centered care throughout Florida.
         </p>
 
@@ -39,7 +39,7 @@ export function JoinOurTeam() {
           {roles.map(({ label, icon: Icon }) => (
             <div
               key={label}
-              className="flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-5 py-3 text-white gentle-animation hover:bg-white/15 hover:border-white/25"
+              className="flex items-center gap-2.5 bg-background/15 backdrop-blur-md border border-white/20 rounded-xl px-5 py-3 text-white gentle-animation hover:bg-background/20 hover:border-white/30"
             >
               <Icon className="w-5 h-5 text-gold-lighter" />
               <span className="font-semibold text-sm">{label}</span>

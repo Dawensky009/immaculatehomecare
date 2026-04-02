@@ -39,8 +39,8 @@ export function HeroSlider() {
         </div>
       ))}
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#2C3E50]/85 via-[#2C3E50]/65 to-[#2C3E50]/40" />
+      {/* Brighter Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/55 via-primary/28 to-sky-blue/10" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
