@@ -82,7 +82,7 @@ export default function CareersPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-28 pb-20 bg-gradient-to-br from-primary via-sky-blue to-teal overflow-hidden">
+      <section className="relative pt-28 pb-20 bg-gradient-to-br from-sky-blue via-primary to-sky-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary rounded-full blur-3xl translate-x-1/3 -translate-y-1/3" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold rounded-full blur-3xl -translate-x-1/3 translate-y-1/3" />

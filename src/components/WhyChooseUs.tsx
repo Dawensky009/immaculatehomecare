@@ -35,7 +35,7 @@ const reasons = [
 
 export function WhyChooseUs() {
   return (
-    <section id="why-choose-us" className="py-20 bg-gradient-to-br from-primary via-sky-blue to-teal text-white relative overflow-hidden">
+    <section id="why-choose-us" className="py-20 bg-gradient-to-br from-sky-blue via-primary to-sky-blue text-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-80 h-80 bg-gold/15 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-60 h-60 bg-background/20 rounded-full blur-3xl" />
@@ -57,7 +57,7 @@ export function WhyChooseUs() {
           {reasons.map((reason) => (
             <div
               key={reason.title}
-              className="flex items-start gap-4 bg-background/15 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-background/20 hover:border-white/30 gentle-animation group"
+              className="flex items-start gap-4 bg-background/18 backdrop-blur-md rounded-xl p-6 border border-white/28 hover:bg-background/24 hover:border-white/35 gentle-animation group"
             >
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-gold to-primary flex-shrink-0 flex items-center justify-center shadow-lg">
                 <reason.icon className="w-5 h-5 text-white" />

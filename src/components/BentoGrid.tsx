@@ -46,7 +46,7 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
 
 export function BentoGrid() {
   return (
-    <section className="bg-gradient-to-br from-primary via-sky-blue to-primary py-16 sm:py-20 lg:py-24">
+    <section className="bg-gradient-to-br from-sky-blue via-primary to-sky-blue py-16 sm:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-12">
@@ -63,7 +63,7 @@ export function BentoGrid() {
           {/* Cell 1: Stats */}
           <ScrollReveal delay={0.1}>
             <motion.div
-              className="bg-background/14 backdrop-blur-md border border-white/20 rounded-2xl p-8 lg:col-span-1 flex flex-col justify-between min-h-[240px]"
+              className="bg-background/18 backdrop-blur-md border border-white/28 rounded-2xl p-8 lg:col-span-1 flex flex-col justify-between min-h-[240px]"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -87,7 +87,7 @@ export function BentoGrid() {
           {/* Cell 2: Trusted Partners */}
           <ScrollReveal delay={0.2}>
             <motion.div
-              className="bg-background/14 backdrop-blur-md border border-white/20 rounded-2xl p-8 flex flex-col justify-between min-h-[240px]"
+              className="bg-background/18 backdrop-blur-md border border-white/28 rounded-2xl p-8 flex flex-col justify-between min-h-[240px]"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -122,7 +122,7 @@ export function BentoGrid() {
           {/* Cell 3: 24/7 + Experience */}
           <ScrollReveal delay={0.3}>
             <motion.div
-              className="bg-background/14 backdrop-blur-md border border-white/20 rounded-2xl p-8 flex flex-col justify-between min-h-[240px]"
+              className="bg-background/18 backdrop-blur-md border border-white/28 rounded-2xl p-8 flex flex-col justify-between min-h-[240px]"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -150,7 +150,7 @@ export function BentoGrid() {
           {/* Cell 4: Florida Map */}
           <ScrollReveal delay={0.4}>
             <motion.div
-              className="bg-background/14 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:col-span-1 lg:col-span-1 min-h-[280px] flex flex-col"
+              className="bg-background/18 backdrop-blur-md border border-white/28 rounded-2xl p-6 md:col-span-1 lg:col-span-1 min-h-[280px] flex flex-col"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -172,7 +172,7 @@ export function BentoGrid() {
           {/* Cell 5: Embedded Marquee */}
           <ScrollReveal delay={0.5}>
             <motion.div
-              className="bg-background/14 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:col-span-1 lg:col-span-2 min-h-[180px] flex flex-col justify-center"
+              className="bg-background/18 backdrop-blur-md border border-white/28 rounded-2xl p-6 md:col-span-1 lg:col-span-2 min-h-[180px] flex flex-col justify-center"
               whileHover={{ scale: 1.01 }}
               transition={{ type: "spring", stiffness: 300 }}
             >

@@ -12,9 +12,9 @@ const roles = [
 
 export function JoinOurTeam() {
   return (
-    <section className="relative py-20 overflow-hidden bg-gradient-to-r from-primary via-sky-blue to-teal">
+    <section className="relative py-20 overflow-hidden bg-gradient-to-r from-sky-blue via-primary to-sky-blue">
       {/* Decorative background */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 left-0 w-72 h-72 bg-background rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
       </div>
@@ -39,7 +39,7 @@ export function JoinOurTeam() {
           {roles.map(({ label, icon: Icon }) => (
             <div
               key={label}
-              className="flex items-center gap-2.5 bg-background/15 backdrop-blur-md border border-white/20 rounded-xl px-5 py-3 text-white gentle-animation hover:bg-background/20 hover:border-white/30"
+              className="flex items-center gap-2.5 bg-background/18 backdrop-blur-md border border-white/28 rounded-xl px-5 py-3 text-white gentle-animation hover:bg-background/24 hover:border-white/35"
             >
               <Icon className="w-5 h-5 text-gold-lighter" />
               <span className="font-semibold text-sm">{label}</span>
