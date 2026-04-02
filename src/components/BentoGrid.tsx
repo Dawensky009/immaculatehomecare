@@ -46,11 +46,11 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
 
 export function BentoGrid() {
   return (
-    <section className="bg-[#1a2d3d] py-16 sm:py-20 lg:py-24">
+    <section className="bg-gradient-to-br from-primary via-sky-blue to-primary py-16 sm:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-12">
-            <p className="text-gold-lighter font-semibold text-sm uppercase tracking-widest mb-3">
+            <p className="text-primary-foreground/80 font-semibold text-sm uppercase tracking-widest mb-3">
               At a Glance
             </p>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -63,7 +63,7 @@ export function BentoGrid() {
           {/* Cell 1: Stats */}
           <ScrollReveal delay={0.1}>
             <motion.div
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 lg:col-span-1 flex flex-col justify-between min-h-[240px]"
+              className="bg-background/14 backdrop-blur-md border border-white/20 rounded-2xl p-8 lg:col-span-1 flex flex-col justify-between min-h-[240px]"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -72,14 +72,14 @@ export function BentoGrid() {
                   <div className="w-10 h-10 rounded-xl bg-gold/20 flex items-center justify-center">
                     <TrendingUp className="w-5 h-5 text-gold-lighter" />
                   </div>
-                  <span className="text-white/60 text-sm font-medium">Trusted Provider</span>
+                  <span className="text-white/80 text-sm font-medium">Trusted Provider</span>
                 </div>
                 <AnimatedCounter target={500} suffix="+" />
-                <p className="text-white/50 text-sm mt-2">Families Served Across Florida</p>
+                <p className="text-white/75 text-sm mt-2">Families Served Across Florida</p>
               </div>
-              <div className="flex items-center gap-2 mt-6 pt-4 border-t border-white/10">
+              <div className="flex items-center gap-2 mt-6 pt-4 border-t border-white/15">
                 <ShieldCheck className="w-4 h-4 text-gold-lighter" />
-                <span className="text-white/60 text-xs">AHCA Licensed Provider</span>
+                <span className="text-white/75 text-xs">AHCA Licensed Provider</span>
               </div>
             </motion.div>
           </ScrollReveal>
@@ -87,30 +87,30 @@ export function BentoGrid() {
           {/* Cell 2: Trusted Partners */}
           <ScrollReveal delay={0.2}>
             <motion.div
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 flex flex-col justify-between min-h-[240px]"
+              className="bg-background/14 backdrop-blur-md border border-white/20 rounded-2xl p-8 flex flex-col justify-between min-h-[240px]"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               <div>
                 <div className="flex items-center gap-2 mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
-                    <Heart className="w-5 h-5 text-primary" />
+                    <div className="w-10 h-10 rounded-xl bg-background/20 flex items-center justify-center">
+                      <Heart className="w-5 h-5 text-gold-lighter" />
                   </div>
-                  <span className="text-white/60 text-sm font-medium">Healthcare Partners</span>
+                    <span className="text-white/80 text-sm font-medium">Healthcare Partners</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
                   Trusted by Leading Networks
                 </h3>
-                <p className="text-white/50 text-sm leading-relaxed">
+                <p className="text-white/75 text-sm leading-relaxed">
                   We partner with hospitals, rehabilitation centers, and insurance networks to
                   deliver seamless continuum-of-care for patients transitioning home.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-2 mt-6 pt-4 border-t border-white/10">
+              <div className="flex flex-wrap gap-2 mt-6 pt-4 border-t border-white/15">
                 {["Medicaid", "Medicare", "Private Insurance"].map((p) => (
                   <span
                     key={p}
-                    className="px-3 py-1 text-xs font-medium rounded-full bg-white/10 text-white/60"
+                    className="px-3 py-1 text-xs font-medium rounded-full bg-background/20 text-white/85"
                   >
                     {p}
                   </span>
@@ -122,7 +122,7 @@ export function BentoGrid() {
           {/* Cell 3: 24/7 + Experience */}
           <ScrollReveal delay={0.3}>
             <motion.div
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 flex flex-col justify-between min-h-[240px]"
+              className="bg-background/14 backdrop-blur-md border border-white/20 rounded-2xl p-8 flex flex-col justify-between min-h-[240px]"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -131,16 +131,16 @@ export function BentoGrid() {
                   <div className="w-10 h-10 rounded-xl bg-gold/20 flex items-center justify-center">
                     <Clock className="w-5 h-5 text-gold-lighter" />
                   </div>
-                  <span className="text-white/60 text-sm font-medium">Always Available</span>
+                  <span className="text-white/80 text-sm font-medium">Always Available</span>
                 </div>
                 <div className="space-y-4">
                   <div>
                     <span className="text-4xl lg:text-5xl font-extrabold text-white">24/7</span>
-                    <p className="text-white/50 text-sm mt-1">Care Available</p>
+                    <p className="text-white/75 text-sm mt-1">Care Available</p>
                   </div>
                   <div>
                     <AnimatedCounter target={15} suffix="+" />
-                    <p className="text-white/50 text-sm mt-1">Years Combined Experience</p>
+                    <p className="text-white/75 text-sm mt-1">Years Combined Experience</p>
                   </div>
                 </div>
               </div>
@@ -150,20 +150,20 @@ export function BentoGrid() {
           {/* Cell 4: Florida Map */}
           <ScrollReveal delay={0.4}>
             <motion.div
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:col-span-1 lg:col-span-1 min-h-[280px] flex flex-col"
+              className="bg-background/14 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:col-span-1 lg:col-span-1 min-h-[280px] flex flex-col"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
-                  <Users className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-xl bg-background/20 flex items-center justify-center">
+                    <Users className="w-5 h-5 text-gold-lighter" />
                 </div>
-                <span className="text-white/60 text-sm font-medium">Service Coverage</span>
+                  <span className="text-white/80 text-sm font-medium">Service Coverage</span>
               </div>
               <div className="flex-1">
                 <FloridaMap />
               </div>
-              <p className="text-center text-white/40 text-xs mt-2">
+              <p className="text-center text-white/70 text-xs mt-2">
                 Proudly serving communities across Florida
               </p>
             </motion.div>
@@ -172,11 +172,11 @@ export function BentoGrid() {
           {/* Cell 5: Embedded Marquee */}
           <ScrollReveal delay={0.5}>
             <motion.div
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:col-span-1 lg:col-span-2 min-h-[180px] flex flex-col justify-center"
+              className="bg-background/14 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:col-span-1 lg:col-span-2 min-h-[180px] flex flex-col justify-center"
               whileHover={{ scale: 1.01 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <p className="text-white/40 text-xs uppercase tracking-widest mb-4 text-center">
+              <p className="text-white/70 text-xs uppercase tracking-widest mb-4 text-center">
                 Our Credentials
               </p>
               <SlidingBanner variant="embedded" />

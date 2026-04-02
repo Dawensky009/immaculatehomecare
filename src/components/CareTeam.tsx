@@ -38,12 +38,12 @@ const roles = [
 
 export function CareTeam() {
   return (
-    <section id="care-team" className="py-20 bg-gradient-to-br from-light-blue to-gold-pale relative overflow-hidden">
+    <section id="care-team" className="py-20 bg-gradient-to-br from-primary/14 via-light-blue to-background relative overflow-hidden">
       <div className="absolute top-0 left-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-14">
-          <span className="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
+          <span className="inline-block bg-primary/10 text-primary border border-primary/20 text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
             Our Team
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-4">
@@ -58,7 +58,7 @@ export function CareTeam() {
           {roles.map((role) => (
             <Card
               key={role.abbr}
-              className="border border-border bg-background hover:shadow-xl gentle-animation text-center group overflow-hidden relative"
+              className="border border-border bg-background/95 hover:shadow-xl gentle-animation text-center group overflow-hidden relative"
             >
               {/* Top gradient accent bar */}
               <div className={`h-1.5 bg-gradient-to-r ${role.color}`} />
@@ -81,7 +81,7 @@ export function CareTeam() {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-muted-foreground max-w-2xl mx-auto bg-background/80 backdrop-blur-sm rounded-xl px-6 py-4 border border-border shadow-sm">
+          <p className="text-muted-foreground max-w-2xl mx-auto bg-background/85 backdrop-blur-sm rounded-xl px-6 py-4 border border-primary/10 shadow-sm">
             Every member of our care team undergoes thorough background checks, credential verification, and ongoing training to ensure the highest standard of care.
           </p>
         </div>

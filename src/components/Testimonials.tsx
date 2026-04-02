@@ -54,11 +54,11 @@ export function Testimonials() {
   const items = [...testimonials, ...testimonials];
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-b from-beige-light to-cream overflow-hidden">
+    <section className="py-16 sm:py-20 bg-gradient-to-b from-primary/12 via-background to-primary/5 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <ScrollReveal>
           <div className="text-center">
-            <span className="inline-block bg-gold/10 text-gold text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
+            <span className="inline-block bg-primary/10 text-primary border border-primary/20 text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
               Testimonials
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">

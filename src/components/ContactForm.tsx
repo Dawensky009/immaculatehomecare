@@ -68,7 +68,7 @@ export function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-cream to-beige-light">
+    <section id="contact" className="py-20 bg-gradient-to-b from-primary/12 via-background to-primary/6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left: Contact Info */}
@@ -81,7 +81,7 @@ export function ContactForm() {
             </p>
 
             <div className="space-y-5">
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-beige border border-beige-dark/30">
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-background/80 border border-primary/10">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                   <Phone className="w-6 h-6 text-primary" />
                 </div>
@@ -91,7 +91,7 @@ export function ContactForm() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-beige border border-beige-dark/30">
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-background/80 border border-primary/10">
                 <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center">
                   <Mail className="w-6 h-6 text-gold" />
                 </div>
@@ -101,7 +101,7 @@ export function ContactForm() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-beige border border-beige-dark/30">
+              <div className="flex items-center gap-4 p-4 rounded-xl bg-background/80 border border-primary/10">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
@@ -119,7 +119,7 @@ export function ContactForm() {
           </div>
 
           {/* Right: Intake Form */}
-          <div className="bg-card rounded-2xl border border-border p-8 shadow-lg relative overflow-hidden">
+          <div className="bg-background/95 rounded-2xl border border-white/30 p-8 shadow-lg relative overflow-hidden backdrop-blur-sm">
             {/* Top gradient accent */}
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-gold via-primary to-gold-light" />
             <h3 className="text-xl font-semibold text-navy mb-6">

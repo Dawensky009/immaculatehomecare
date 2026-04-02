@@ -69,12 +69,12 @@ export function OurServices() {
   const [expanded, setExpanded] = useState<number | null>(0);
 
   return (
-    <section id="services" className="py-20 bg-cream relative overflow-hidden">
+    <section id="services" className="py-20 bg-gradient-to-b from-primary/12 via-background to-primary/5 relative overflow-hidden">
       <div className="absolute top-20 left-0 w-72 h-72 bg-gold/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-14">
-          <span className="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
+          <span className="inline-block bg-primary/10 text-primary border border-primary/20 text-sm font-semibold px-4 py-1.5 rounded-full mb-4 tracking-wide uppercase">
             Our Services
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-4">
@@ -89,7 +89,7 @@ export function OurServices() {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="border border-border rounded-xl bg-card overflow-hidden hover:shadow-lg gentle-animation group relative"
+                className="border border-border rounded-xl bg-card/95 overflow-hidden hover:shadow-lg gentle-animation group relative"
             >
               {/* Left accent bar */}
               <div className={`absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b ${service.gradient} opacity-0 group-hover:opacity-100 gentle-animation`} />

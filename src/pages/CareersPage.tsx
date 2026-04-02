@@ -82,20 +82,20 @@ export default function CareersPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-28 pb-20 bg-navy overflow-hidden">
+      <section className="relative pt-28 pb-20 bg-gradient-to-br from-primary via-sky-blue to-teal overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary rounded-full blur-3xl translate-x-1/3 -translate-y-1/3" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold rounded-full blur-3xl -translate-x-1/3 translate-y-1/3" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Badge className="mb-5 bg-gold/20 text-gold-lighter border-gold/30 hover:bg-gold/30">
+          <Badge className="mb-5 bg-background/15 text-primary-foreground border-white/20 hover:bg-background/20">
             We're Hiring
           </Badge>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-5">
             Build a Career in{" "}
             <span className="text-gold-lighter">Compassionate Care</span>
           </h1>
-          <p className="text-lg sm:text-xl text-white/75 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
             Join Immaculate Home Care Services and help us deliver exceptional, patient-centered home health care across Florida.
           </p>
         </div>
@@ -103,7 +103,7 @@ export default function CareersPage() {
 
       {/* Benefits */}
       <ScrollReveal>
-        <section className="py-20 bg-beige">
+        <section className="py-20 bg-gradient-to-b from-primary/12 via-background to-primary/6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
               <Badge variant="secondary" className="mb-3 border-gold/20 text-gold">
@@ -139,7 +139,7 @@ export default function CareersPage() {
 
       {/* Open Positions */}
       <ScrollReveal>
-        <section className="py-20 bg-cream">
+        <section className="py-20 bg-gradient-to-b from-background to-primary/6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
               <Badge variant="secondary" className="mb-3 border-primary/20 text-primary">
@@ -190,7 +190,7 @@ export default function CareersPage() {
 
       {/* Application Form */}
       <ScrollReveal>
-        <section id="apply" className="py-20 bg-beige-light">
+        <section id="apply" className="py-20 bg-gradient-to-b from-primary/8 via-background to-primary/4">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <Badge variant="secondary" className="mb-3 border-gold/20 text-gold">

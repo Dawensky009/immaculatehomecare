@@ -35,16 +35,16 @@ export function SlidingBanner({ variant = "standalone" }: SlidingBannerProps) {
   }
 
   return (
-    <section className="bg-gradient-to-r from-beige via-beige-light to-beige py-4 overflow-hidden border-y border-beige-dark/30">
+    <section className="bg-gradient-to-r from-primary via-sky-blue to-primary py-4 overflow-hidden border-y border-white/15 shadow-lg">
       <div className="flex animate-marquee whitespace-nowrap">
         {items.map((item, i) => (
           <div
             key={i}
-            className="inline-flex items-center gap-2.5 mx-8 text-navy/80 text-sm font-semibold tracking-wide uppercase"
+            className="inline-flex items-center gap-2.5 mx-8 text-primary-foreground/90 text-sm font-semibold tracking-wide uppercase"
           >
-            <item.icon className="w-5 h-5 text-primary flex-shrink-0" />
+            <item.icon className="w-5 h-5 text-gold-lighter flex-shrink-0" />
             <span>{item.label}</span>
-            <span className="text-gold/40 ml-4">•</span>
+            <span className="text-gold-lighter/50 ml-4">•</span>
           </div>
         ))}
       </div>
