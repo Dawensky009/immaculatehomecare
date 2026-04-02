@@ -1,5 +1,6 @@
 import { Stethoscope, HandHelping, Baby, Users, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
@@ -136,6 +137,14 @@ export function OurServices() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <a href="#contact">
+            <Button className="bg-gradient-to-r from-gold to-gold-light text-white font-semibold px-8 py-3 text-lg rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+              Get in Touch Now
+            </Button>
+          </a>
         </div>
       </div>
     </section>
